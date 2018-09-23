@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* body{
+        height: 9999px;
+    }
+    div{
+        margin-top: 50px;
+        position: sticky;
+        height: 30px;
+    } */
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+    .mask{
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        background: url("bg.jpg") no-repeat;
+        background-size: cover;
+        filter: blur(15px);
+    }
+    #box {
+        width: 1800px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        transition: opacity 2s;
+        transition-delay: 1s;
+    }
+
+    #box span {
+        transition: left 2s ease-out, top 2s ease-out;
+    }
+</style>
+
+<body>
+    <div id="box"></div>
+    <div class="mask"></div>
+    <script>
+        let row = 17.67,
+            column = 10.41,
+            oBox = document.getElementById("box"),
+            oBoxW = oBox.scrollWidth,
+            oBoxH = oBox.scrollHeight,
+            fragment = document.createDocumentFragment();
+        for (let j = 0; j < column; j++) {
+            for (let i = 0; i < row; i++) {
+                let oSpan = document.createElement("span");
+                oSpan.style.cssText = `
+                    position: absolute;
+                    width:${oBoxW / row}px;
+                    height:${oBoxH / column}px;
+                    background-image: url("bg.jpg");
+                    background-repeat: no-repeat;
+                    left: ${oBoxW / row * i}px;
+                    top: ${oBoxH / column * j}px;
+                    opacity: 1;
+                    background-position: ${-oBoxW / row * i}px ${-oBoxH / column * j}px;
+                    transition-delay: ${Math.random()}s;
+                `;
+                oSpan.place = {
+                    left: oBoxW / row * i + "px",
+                    top: oBoxH / column * j + "px"
+                };
+                fragment.appendChild(oSpan);
+            }
+        }
+        oBox.appendChild(fragment);
+        let allSpan = oBox.getElementsByTagName("span"), vX, vY;
+        function move(){
+            for (let i = 0; i < allSpan.length; i++) {
+                vX = Math.random() * 500;
+                if ((Math.ceil(Math.random() * 10) % 2)) {
+                    vX = -vX;
+                }
+                vY = Math.random() * 500;
+                if ((Math.ceil(Math.random() * 10) % 2)) {
+                    vY = -vY;
+                }
+                allSpan[i].style.left = parseInt(allSpan[i].style.left) + vX + "px";
+                allSpan[i].style.top = parseInt(allSpan[i].style.top) + vY + "px";
+            }
+            oBox.style.opacity=0;
+            setTimeout(function () {
+                for (let i = 0; i < allSpan.length; i++) {
+                    allSpan[i].style.left = allSpan[i].place.left;
+                    allSpan[i].style.top = allSpan[i].place.top;
+                }
+                oBox.style.opacity=1;
+            }, 3000);
+            setTimeout(move, 8000);
+        }
+        window.onload=function(){
+            setTimeout(move,1000);
+        }
+        // let str="";
+        // for (let i = 0; i < 100; i++) {
+        //     str+="<div></div>";
+        // }
+        // document.getElementsByTagName("body")[0].innerHTML=str;
+        // let aBox=document.getElementsByTagName("div");
+        // for (let i = 0; i < aBox.length; i++) {
+        //     let r=Math.floor(Math.random()*256);
+        //     let g=Math.floor(Math.random()*256);
+        //     let b=Math.floor(Math.random()*256);
+        //     aBox[i].style.background=`rgb(${r},${g},${b})`;
+        //     aBox[i].style.top=i*30+"px";
+        // }
+
+
+
+        // var arr=[];
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i]=function(){
+        //         console.log(i);
+        //     }
+        // }
+        // console.log(arr[5]());
+
+    </script>
+</body>
+
+</html>

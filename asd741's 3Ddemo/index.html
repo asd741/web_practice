@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+ul,li{
+	list-style-type:none;
+}
+body,p,h2{
+	margin:0px;
+	padding:0px;
+}
+p:hover,h2:hover{
+	cursor:pointer;
+}
+h2{
+	color:rgba(0,0,0,.8);
+}
+body{
+	background:rgba(255,192,203,.5)url("B.jpg") no-repeat;
+	perspective:1200px;
+}
+.demo{
+	width:inherit;
+	height:inherit;
+	border:#40E0D0 1px solid;
+	background:rgba(0,255,255,.4);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);	
+	color:#822E46;
+	text-align:center;
+	font-size:12px;
+	position:absolute;
+}
+.demo li p{
+	line-height:40px;
+	font-weight:bold;
+	width:200px;
+	display:inline-block;
+	border-bottom:#FBE288 1px solid;
+}
+
+#demobox{
+	width:320px;
+	height:200px;
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	margin:auto;
+	transform-style:preserve-3d;
+	background:url("tree.png") no-repeat center;
+	background-size:contain;
+}
+</style>
+</head>
+<body>
+	<div id="demobox">
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+		<div class="demo">
+			<li><h2>標題在此</h2></li>
+			<li><p>帥氣的第一行</p></li>
+			<li><p>煞氣的第二行</p></li>
+			<li><p>霸氣的第三行</p></li>
+			<li><p>最後一行</p></li>
+		</div>
+	</div>
+
+<script>
+	var ademo=document.getElementsByClassName("demo"),
+		odemobox=document.getElementById("demobox"),
+		timer;
+	
+	for(i=0;i<ademo.length;i++){
+		ademo[i].style.transform="rotateY("+(360/ademo.length)*i+"deg)translateZ(600px)";	//n個demo平分360度
+	}
+	var demomove={				
+		deg:0,			//角度
+		nowX:0,			//滑鼠當前位置
+		lastX:0,		//移動後位置
+		disX:0,			//距離差
+	};
+	document.onmousedown=function(ev){
+		demomove.lastX=0;
+		var ev= ev || window.event;
+		demomove.lastX=ev.clientX;
+		clearInterval(timer);
+		this.onmousemove=function(ev){
+			var ev= ev || window.event;
+			demomove.nowX=ev.clientX;
+			demomove.disX=demomove.nowX-demomove.lastX;
+			demomove.lastX=demomove.nowX;			//最後的座標為新起始點，與下一次的座標計算差值
+			demomove.deg+=demomove.disX*0.05;
+			odemobox.style.transform="rotateY("+demomove.deg+"deg)";
+			return false;		//阻止默認選取事件
+		}
+		this.onmouseup=function(){			
+			this.onmousemove = null;
+			timer=setInterval(function(){
+				demomove.disX*=0.95;
+				demomove.deg+=demomove.disX*0.01;
+				odemobox.style.transform="rotateY("+demomove.deg+"deg)";
+				if(Math.abs(demomove.disX)<1){
+					clearInterval(timer);
+				}
+				
+			},13)
+		}
+	}
+</script>
+</body>
+</html>
+
+
+

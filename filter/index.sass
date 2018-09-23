@@ -1,0 +1,284 @@
+$mainColor: #7828b4
+$mainColorHover: #9013fe
+$bgColor: #ebebeb
+$color: #9b9b9b
+$asideSearchHeight: 40px
+@mixin boxSizing
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+ul
+    list-style: none
+html
+    background: #f2f2f2
+figure
+    margin: 0px
+.wrap
+    width: 1200px
+    margin: auto
+.inlineBlock
+    display: inline-block !important
+.displayNone
+    display: none !important
+.displayBlock
+    display: block !important
+.whiteSpaceNowrap
+    white-space: nowrap
+    font-size: 0px
+.whiteSpaceinitial
+    white-space: initial
+.lFloat
+    float: left
+.rFloat
+    float: right
+.clearfix::after
+    content: ""
+    display: block
+    clear: both
+mark
+    background: $mainColor
+    color: #fff
+body
+    margin: 0
+main
+    +boxSizing
+.top
+    width: inherit
+    padding: 24px 0px
+    +boxSizing
+    font-family: Optima-ExtraBlack
+    background: $mainColor
+    & .logo
+        height: 44px
+        font-size: 36px
+        margin-left: 78px
+        margin-right: 150px
+        color: #fff
+        font-family: Optima-ExtraBlack
+        font-weight: 900
+    & .search
+        height: 44px
+        padding: 4.5px
+        white-space: nowrap
+        +boxSizing
+        & .searchIcon
+            font-size: 20px
+            margin-right: 20px
+        & input
+            border: 0
+            padding: 0
+            margin: 0
+            width: 300px
+            line-height: 33px
+            background: none
+            outline: none
+            color: #fff
+            font-size: 20px
+            border-bottom: 2px solid #fff
+            &::placeholder
+                color: $bgColor
+@media screen and (max-width:414px)
+    .wrap
+        width: 100vw !important
+    .top
+        width: 100vw !important
+        background: none
+        text-align: center !important
+        white-space: initial !important
+        & .logo
+            float: none !important
+            width: 100vw !important
+            margin: 0px !important
+            background: $mainColor !important
+        & .search
+            float: none !important
+            width: 100vw !important
+            margin: 0px !important
+            & input
+                color: black !important
+                border-bottom: 2px solid gray !important
+            & input::placeholder
+                color: #fff
+aside
+    width: 300px
+    background: $bgColor
+    margin-left: 38px  
+    display: inline-block
+    & input[type="text"]
+        height: $asideSearchHeight
+        padding: 11px
+        +boxSizing
+    & .location
+        padding: 24px 40px
+        font-size: 16px
+        +boxSizing
+        & input
+            width: 100%
+    & .date
+        padding: 24px 40px
+        font-size: 18px
+        +boxSizing
+        & .inputList
+            line-height: $asideSearchHeight
+            margin-bottom: 8px
+        & input
+            width: 160px
+        & .title
+            line-height: 20px
+            font-size: 20px
+        & .switch
+            color: #000
+            font-size: 20px
+            font-weight: 900
+            border: 1px solid
+            width: 20px
+            height: 20px
+            line-height: 20px
+            text-align: center
+    & .categories
+        padding: 24px 40px
+        font-size: 18px
+        +boxSizing
+        & .title
+            line-height: 20px
+            font-size: 20px
+        & .switch
+            color: #000
+            font-size: 20px
+            font-weight: 900
+            border: 1px solid
+            width: 20px
+            height: 20px
+            line-height: 20px
+            text-align: center
+.date,.categories 
+    & .switch:hover
+        cursor: pointer
+        background: $mainColor
+        color: #fff
+        border-color: $bgColor
+@media screen and (max-width:414px)
+    aside
+        width: 100vw !important
+        display: block !important
+    aside .date,.categories
+        background: #d7d7d7
+        & .switch
+            display: block !important
+        & .dropdowns
+            transition: height .3s
+            height: 0px
+            overflow: hidden
+@media screen and (min-width:414px)
+    aside .dropdowns
+        height: 220px !important
+main
+    vertical-align: top
+    & .result
+        padding-left: 40px
+        +boxSizing
+        & .title
+            font-size: 24px
+            height: 30px
+            background: #ccc
+        & .mark
+            font-weight: 900
+            color: $mainColor
+        & .tags
+            & .tag
+                border: 1px $mainColor solid
+                border-radius: 100px
+                width: 150px
+                height: 35px
+                padding: 8px 16px
+                margin-right: 8px
+                font-size: 16px
+                line-height: 19px
+                +boxSizing
+                color: $mainColor
+                & .tagText
+                    margin-right: 12px
+                & .close
+                    border-radius: 50%
+                    width: 24px
+                    height: 24px
+                    text-align: center
+                    display: inline-block
+                    line-height: 19px
+    & #listWrap
+        margin-top: 24px
+        padding: 24px 40px 0px
+        & .list
+            font-size: 0px
+            margin-bottom: 24px
+        & img
+            margin-right: 15px
+            width: 220px
+            height: 220px
+            transition: width .2s,margin .2s
+            background: #ccc
+        & .content
+            width: 530px
+            height: 220px
+            background: #ccc
+            // background: #fff
+            vertical-align: top
+            transition: width .2s
+            overflow: auto
+            & .title
+                font-size: 24px
+                color: $mainColor
+            & .description
+                font-size: 16px
+                line-height: 30px
+@media screen and (max-width:414px)
+    .result
+        text-align: center
+        padding-left: 0px !important
+    main
+        padding: 0px !important
+    #listWrap
+        width: auto !important
+        &.list
+            width: 100%
+            min-width: 200px
+        & .content
+            height: auto !important
+@media screen and (max-width: 768px)
+    .wrap
+        width: auto !important
+        & .top
+            width: 768px
+            & .logo,.search
+                float: none !important
+                display: inline-block !important  
+    #listWrap
+        width: calc(100vw - 300px) 
+        +boxSizing
+        & .list
+            width: calc(100% -35px -42px)
+            min-width: 300px
+            & img
+                width: 100%
+                margin-right: 0px !important
+            & .content
+                width: 100%
+                overflow: visible
+                height: auto
+    aside
+        margin: 0px !important
+footer
+    text-align: center
+    & .indexBox
+        display: inline-block
+        font-size: 0px
+        & .index
+            display: inline-block
+            width: 41px
+            height: 42px
+            line-height: 42px
+            font-size: 16px
+            text-align: center
+            font-family: HelveticaNeue
+            color: #9013FE
+                    

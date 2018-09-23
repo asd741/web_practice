@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function cRem() {
+            if (window.innerWidth >= 540) {
+                document.documentElement.style.fontSize = 540 / 10 + "px";
+            } else {
+                document.documentElement.style.fontSize = window.innerWidth / 10 + "px";
+            }
+        }
+        cRem();
+        window.onresize = function () {
+            cRem();
+        };
+    </script>
+</head>
+
+<body>
+    <div class="pageWrap">
+        <div class="header mt-1 d-flex justify-content-between align-items-center">
+            <div></div>
+            <div class="search d-flex align-items-center">
+                <div class="mx-1" style="box-sizing:content-box;"></div>
+                <input type="text" placeholder="連衣裙" style="background-color: #eee;">
+            </div>
+            <div></div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide my-1" data-ride="carousel">
+            <ol class="carousel-indicators d-flex m-0 justify-content-start">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/1-banner/1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/1-banner/2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/1-banner/3.jpg" alt="Third slide">
+                </div>
+            </div>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/1.gif" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/2.jpg" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/3.gif" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/4.jpg" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/5.png" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/6.jpg" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/7.jpg" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/8.png" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/9.jpg" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="clearfix w-20 p-1 text-center float-left">
+            <img class="w-100" src="img/2-navIcon/10.gif" alt="">
+            <p class="m-0 fz16 text-dark">圖片標題</p>
+        </div>
+        <div class="time w-100 d-flex justify-content-between align-items-center">
+            <h2 class="m-0 mr-2">19点快抢 · 距结束</h2>
+            <div class="clock d-flex align-items-center">
+                <span class="fz18 square">00</span>
+                <span class="fz18 mx-1">:</span>
+                <span class="fz18 square">00</span>
+                <span class="fz18 mx-1">:</span>
+                <span class="fz18 square">00</span>
+            </div>
+            <div class="" style="">
+                <p class="more fz18 m-0 d-flex justify-content-between align-items-center">MORE</p>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="view">
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/1.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39
+                            <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/2.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39
+                            <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/3.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39
+                            <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/4.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39
+                            <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/5.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39</span>
+                        <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/6.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39</span>
+                        <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/7.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39</span>
+                        <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/8.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39</span>
+                        <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/9.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39</span>
+                        <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+                <div class="sliderContent">
+                    <img src="img/3-rushBuy/10.jpg" alt="">
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span>￥39</span>
+                        <small style="text-decoration: line-through;">￥70.00</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sell">
+            <h2 class="fz18 py-1">超实惠-促销直达</h2>
+            <div class="d-flex">
+                <div class="d-flex flex1 flex-column border0">
+                    <p class="text-center fz18">秒变女王
+                        <br/>
+                        <small class="colorPink">春装上新抢鲜购</small>
+                    </p>
+                    <img src="img/5-cheap/1.png" alt="">
+                </div>
+                <div class="flex1" style="border-left: 1px solid #bbb;">
+                    <div class="d-flex border0">
+                        <p class="text-center fz18">秒变女王
+                            <br/>
+                            <small class="colorPink">春装上新抢鲜购</small>
+                        </p>
+                        <img src="img/5-cheap/2.png" alt="">
+                    </div>
+                    <div class="d-flex border0" style="border-top: 1px solid #bbb !important;">
+                        <p class="text-center fz18">秒变女王
+                            <br/>
+                            <small class="colorPink">春装上新抢鲜购</small>
+                        </p>
+                        <img src="img/5-cheap/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex" style="border-top: 0px;">
+                <div class="flex1 d-flex flex-column border0">
+                    <p class="text-center fz18">秒变女王
+                        <br/>
+                        <small class="colorPink">春装上新抢鲜购</small>
+                    </p>
+                    <img src="img/5-cheap/4.png" alt="">
+                </div>
+                <div class="flex1 d-flex flex-column border0" style="border-left: 1px solid #bbb !important;">
+                    <p class="text-center fz18">秒变女王
+                        <br/>
+                        <small class="colorPink">春装上新抢鲜购</small>
+                    </p>
+                    <img src="img/5-cheap/5.png" alt="">
+                </div>
+                <div class="flex1 d-flex flex-column border0" style="border-left: 1px solid #bbb !important;">
+                    <p class="text-center fz18">秒变女王
+                        <br/>
+                        <small class="colorPink">春装上新抢鲜购</small>
+                    </p>
+                    <img src="img/5-cheap/6.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="hot clearfix" style="text-align: center;">
+            <img class="m-auto" src="img/6-hotMarket/hot.jpg" alt="">
+            <div class="shop">
+                <div class="float-left">
+                    <img src="img/6-hotMarket/1.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/2.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/3.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/4.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/5.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/6.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/7.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/8.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/9.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/10.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/11.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/12.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/13.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/14.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/15.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+                <div class="float-left">
+                    <img src="img/6-hotMarket/16.png" alt="">
+                    <p class="fz16">圖片標題</p>
+                </div>
+            </div>
+        </div>
+        <div class="like text-center">
+            <img src="img/7-like/title.jpg" class="mb-2" alt="">
+            <div class="shop d-flex justify-content-between flex-wrap">
+                <div class="mb-2">
+                    <img src="img/7-like/1.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/2.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/3.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/4.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/5.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/6.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/7.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2">
+                    <img src="img/7-like/8.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+                <div class="mb-2 m-auto">
+                    <img src="img/7-like/9.jpg" alt="">
+                    <p class="text-left mt-1">
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">吊带连衣裙</span>
+                        <span class="mb-1 d-inline-block text-muted fz16">网纱</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">明星同款</span>
+                        <span class="mb-1 px-1 d-inline-block text-muted fz16">韩版</span>
+                    </p>
+                    <p class="px-1 d-flex justify-content-between">
+                        <span class="fz16">¥79</span>
+                        <span>
+                            <span class="fz16 align-middle text-muted">555</span>
+                            <img class="align-middle icon" src="img/7-like/icon.jpg" class="icon" alt="">
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer fixed-bottom clearfix bg-white py-1">
+        <div class="text-center w-25 float-left d-flex flex-column align-items-center justify-content-center">
+            <img src="img/8-bottomNav/1.png" alt="">
+            <span class="fz18 text-muted">icon</span>
+        </div>
+        <div class="text-center w-25 float-left d-flex flex-column align-items-center justify-content-center">
+            <img src="img/8-bottomNav/2.png" alt="">
+            <span class="fz18 text-muted">icon</span>
+        </div>
+        <div class="text-center w-25 float-left d-flex flex-column align-items-center justify-content-center">
+            <img src="img/8-bottomNav/3.png" alt="">
+            <span class="fz18 text-muted">icon</span>
+        </div>
+        <div class="text-center w-25 float-left d-flex flex-column align-items-center justify-content-center">
+            <img src="img/8-bottomNav/4.png" alt="">
+            <span class="fz18 text-muted">icon</span>
+        </div>
+    </div>
+    <script>
+        ~(function () {
+            let lastX = 0, vX = 0;
+            $(".view img").attr("draggable", "false");
+            $(".view").mousedown(function (e) {
+                e = e || window.event;
+                let initX = e.clientX;
+                $(this).bind("mousemove", function (e) {
+                    e = e || window.event;
+                    let nowX = e.clientX;
+                    vX = (nowX - initX) * 0.2;
+                    $(this).css("transform", "translateX(" + (lastX + vX) + "%)");
+                });
+                $(document).one("mouseup", (function () {
+                    lastX += vX;
+                    if (lastX > 0) {
+                        lastX = Math.min(lastX, 0);
+                    }
+                    if (lastX < -60) {
+                        lastX = Math.max(lastX, -60);
+                    }
+                    $(".view").css("transform", "translateX(" + lastX + "%)");
+                    $(".view").unbind("mousemove");
+                }));
+            });
+        })();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todoList</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script>
+        var ui=1024;
+        var width=window.screen.width;
+        var oHtml=document.documentElement;
+        oHtml.style.fontSize=width+"px";
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <section>
+                <p>My Tasks</p>
+                <span class="line"></span>
+            </section>
+            <section>
+                <p>In Progress</p>
+                <span class="line"></span>
+            </section>
+            <section>
+                <p>Completed</p>
+                <span class="line"></span>
+            </section>
+        </nav>
+    </header>
+    <section id="AddTask">
+        <span id="add">
+            <span class="rowBorder"></span>
+            <span class="columnBorder"></span>
+        </span>
+        <span class="placeHolder">Add Task</span>
+    </section>
+    <section class="list">
+        <section class="titleBlock">
+            <section class="titleList">
+                <input class="checkbox" type="checkbox" name="" id="">
+                <input type="text" class="title" placeholder="Type Something Here..." disabled>
+                <span class="pencil right clearfix">
+                    <i class="fas fa-pencil-alt"></i>
+                </span>
+                <span class="star right clearfix">
+                    <i class="far fa-star"></i>
+                </span>    
+            </section>
+            <section class="infoList">
+                <span class="dateIcon left clearfix">
+                    <i class="fas fa-calendar-alt"></i>
+                </span>
+                <span class="dateSpan left clearfix">
+                    <i class="titleDateText">5/14</i>
+                </span>
+                <span class="pageIcon left clearfix">
+                    <i class="far fa-file"></i>
+                    <span class="fileRecord"></span>
+                </span>
+                <span class="chatIcon left clearfix">
+                    <i class="far fa-comment"></i>
+                    <span class="msgRecord"></span>
+                </span>  
+            </section>
+        </section>
+        <section class="dropdowns displayNone">
+            <section class="contentBlock">
+                <section class="deadLine1">
+                    <span class="dateIcon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </span>
+                    <span class="dateTitle">Deadline</span>
+                </section>
+                <section class="deadLine2">
+                    <input type="date" class="inputDate" placeholder="2014-09-18">
+                </section>
+                <section class="file1">
+                    <span class="fileIcon">
+                        <i class="far fa-file"></i>
+                    </span>
+                    <span class="fileTitle">File</span>
+                </section>
+                <section class="file2">
+                    <span class="addFile">
+                        +<input type="file" class="addFileInput"onchange=readFile(this.files[0],this.parentNode.nextElementSibling)>
+                    </span>
+                    <section class="files">
+                    </section>
+                </section>
+                <section class="comment1">
+                    <span class="commentIcon">
+                        <i class="far fa-comment"></i>
+                    </span>
+                    <span class="commentTitle">Comment</span>
+                </section>
+                <section class="comment2">
+                    <textarea placeholder="Type your memo here" class="commentBlock"></textarea>
+                </section>
+            </section>
+            <section class="saveBlock">
+                <section class="cancel">
+                    <span class="close">
+                        <i class="far fa-times-circle"></i>
+                    </span>
+                    <span>Cancel</span>
+                </section>
+                <section class="save">
+                    <span class="add">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span>Save</span>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

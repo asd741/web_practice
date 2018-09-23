@@ -1,0 +1,311 @@
+@mixin boxSizing
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+$scale: 1024
+.starCk
+    color: #F5A623
+.pencilCk
+    color: #4A90E2
+.titleCk
+    background: #FFF2DC
+.right
+    float: right
+.left
+    float: left
+.clearfix::after
+    content: ""
+    display: block
+    clear: both
+.displayNone
+    display: none
+input
+    padding: 0
+    margin: 0
+    bottom: 0
+input[type="text"]
+    font-family: Roboto-Regular
+    font-size: 16rem / $scale
+    color: #C8C8C8
+html
+    background: #E1E1E1 !important
+body
+    margin: 0px
+    padding: 0px
+section
+    font-size: 0px
+header
+    background: #4A90E2
+    padding: 0px 175rem / $scale
+    & nav
+        width: 660rem / $scale
+        display: block
+        margin: auto
+        height: 74rem / $scale
+    & section
+        width: 160rem / $scale
+        height: 74rem / $scale
+        margin: 0px 30rem / $scale
+        float: left
+        font-family: Roboto-Regular
+        color: #00408B
+        text-align: center
+        position: relative
+        & p
+            font-size: 24rem / $scale
+            height: 28rem / $scale
+            margin: 0px
+            padding: 0px
+            line-height: 74rem / $scale
+        & .line
+            width: 100%
+            height: 5rem / $scale
+            background: #00408B
+            position: absolute
+            bottom: 0
+            left: 0
+            display: none
+        &:hover
+            color: #fff
+            cursor: pointer
+            & .line
+                display: block
+#AddTask
+    width: 620rem / $scale
+    height: 65rem / $scale
+    margin: 24rem / $scale auto
+    background: #FFFFFF
+    border: 2px solid #C8C8C8
+    border-radius: 5px
+    padding-left: 42.2rem / $scale
+    +boxSizing
+    & #add
+        display: inline-block
+        width: 20rem / $scale
+        height: 20rem / $scale
+        top: calc(50% - (20rem / 1024 / 2))
+        position: relative
+        &:hover
+            cursor: pointer
+        & .rowBorder
+            height: 1.3rem / $scale
+            width: 20rem / $scale
+            background: #c8c8c8
+            position: absolute
+            top: calc(50% - (1.3rem / 1024 / 2))
+            left: 0
+        & .columnBorder
+            width: 1.7rem / $scale
+            height: 20rem / $scale
+            background: #c8c8c8
+            position: absolute
+            left: calc(50% - (1.7rem / 1024 / 2))
+            top: 0
+    & .placeHolder
+        width: 99rem / $scale
+        height: 28rem / $scale
+        color: #c8c8c8
+        display: inline-block
+        font-size: 24rem / $scale
+        margin-left: 5rem / $scale
+        top: calc(50% - (20rem / 1024 / 2))
+        position: relative
+.list
+    width: 620rem / $scale
+    background: #f2f2f2
+    margin: 8rem / $scale auto
+    +boxSizing
+    & .titleBlock
+        padding-top: 24rem / $scale
+        padding-bottom: 17rem / $scale
+    & .titleList
+        margin-left: 32rem / $scale
+        & .checkbox
+            background: #FFFFFF !important
+            border-radius: 2px
+            width: 24rem / $scale
+            height: 24rem / $scale
+            vertical-align: middle
+            margin-right: 16rem / $scale
+        & .title
+            font-family: Roboto-Medium
+            font-size: 24rem / $scale
+            color: #000000
+            width: 248rem / $scale
+            height: 28rem / $scale
+            display: inline-block
+            margin: 0px
+            vertical-align: middle
+            background: none
+            border: 0px
+            padding: 0px
+            outline: none
+        & .pencil,.star
+            width: 24rem / $scale
+            height: 24rem / $scale
+            margin-right: 32rem / $scale
+            text-align: center
+            & i
+                width: 100%
+                height: 100%
+                font-size: 15rem / $scale
+                line-height: 24rem / $scale
+                &:hover
+                    cursor: pointer
+        & .pencil:hover
+            color: #4A90E2
+        & .star:hover
+            color: #F5A623
+    & .infoList
+        margin-left: 32rem / $scale
+        height: 19rem / $scale
+        margin-top: 15rem / $scale
+        & .dateIcon
+            height: 19rem / $scale
+            margin-right: 8rem / $scale
+            color: #757575
+            &:hover
+                cursor: pointer
+                color: #fcac45
+            & i
+                line-height: 19rem / $scale
+                font-size: 15rem / $scale
+        & .dateSpan
+            height: 19rem / $scale
+            margin-right: 16rem / $scale
+            color: #757575
+            &:hover
+                cursor: pointer
+                color: #fcac45
+            & .titleDateText
+                line-height: 19rem / $scale
+                font-size: 15rem / $scale
+                font-style: normal
+                font-family: Roboto-Regular
+        & .pageIcon
+            height: 19rem / $scale
+            margin-right: 16rem / $scale
+            color: #757575
+            &:hover
+                cursor: pointer
+                color: #fcac45
+            & i
+                line-height: 19rem / $scale
+                font-size: 15rem / $scale
+            & .fileRecord
+                font-size: 10rem / $scale
+        & .chatIcon
+            height: 19rem / $scale
+            margin-right: 16rem / $scale
+            color: #757575
+            font-size: 10rem / $scale
+            &:hover
+                cursor: pointer
+                color: #fcac45
+            & i
+                line-height: 19rem / $scale
+                font-size: 15rem / $scale
+    & .contentBlock
+        box-shadow: 0px -3px 0px 0px #c8c8c8
+        width: 620rem / $scale
+        background: #f2f2f2
+        padding: 24rem / $scale 0rem / $scale 24rem / $scale 72rem / $scale
+        +boxSizing
+        left: 0
+        & span[class*="Icon"]
+            width: 15rem / $scale
+            height: 17.1rem / $scale
+            font-size: 15rem / $scale
+            margin-right: 9rem / $scale
+            vertical-align: middle
+            display: inline-block
+        & span[class*="Title"]
+            font-size: 20rem / $scale
+            vertical-align: middle
+        & .deadLine1
+            color: #000
+            display: block
+        & .deadLine2
+            margin-bottom: 22rem / $scale
+            & input
+                width: 162rem / $scale
+                height: 35rem / $scale
+                padding: 8rem / $scale 16rem / $scale
+                border: 0px
+                background: #ffffff
+                border-radius: 2rem / $scale
+                +boxSizing
+            & input:nth-of-type(1)
+                margin: 0px 8rem / $scale 0px 24rem / $scale
+                font-size: 10rem / $scale
+        & .file2
+            margin: 11rem / $scale 0px 27rem / $scale 24rem / $scale
+            display: inline-block
+        & .addFile
+            width: 32rem / $scale
+            height: 32rem / $scale
+            display: block
+            background: #c8c8c8
+            color: #fff
+            border-radius: 2rem / $scale
+            font-size: 32rem / $scale
+            text-align: center
+            line-height: 32rem / $scale
+            position: relative
+            & .addFileInput
+                position: absolute
+                left: 0
+                top: 0
+                width: 32rem / $scale
+                height: 32rem / $scale
+                opacity: 0
+        & .files
+            display: block
+            & .fileDemo
+                width: 150rem / $scale
+                height: 150rem / $scale
+                margin-left: 32rem / $scale
+                margin-top: 32rem / $scale
+                text-align: center
+                display: inline-block
+                & img
+                    height: 100%
+                    width: 100%
+                    display: block
+                & span
+                    display: inline-block
+                    font-size: 10rem / $scale
+                    margin-top: 2rem / $scale
+                    color: #fcac45
+        & .commentBlock
+            width: 413rem / $scale
+            height: 104rem / $scale
+            margin-left: 24rem / $scale
+            padding: 8rem / $scale 16rem / $scale
+            font-size: 24rem / $scale
+            border: 0px
+            +boxSizing
+    & .saveBlock
+        & section
+            display: inline-block
+            width: 310rem / $scale
+            height: 60rem / $scale
+            text-align: center
+        & .cancel
+            font-size: 24rem / $scale
+            line-height: 60rem / $scale
+            color: #d0021b
+            background: #fff
+            &:hover
+                cursor: pointer
+            & .close
+                margin-right: 13.9rem / $scale
+        & .save
+            font-size: 24rem / $scale
+            line-height: 60rem / $scale
+            color: #fff
+            background: #4A90E2
+            &:hover
+                cursor: pointer
+            & .add
+                margin-right: 13.9rem / $scale

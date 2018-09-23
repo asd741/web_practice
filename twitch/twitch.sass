@@ -1,0 +1,73 @@
+$videoheight: 168.75px
+$contentheight: 50px
+body
+    background: url("img/3.jpg") no-repeat fixed
+    height: 100vw
+    width: 100vw
+    margin: 0
+    padding: 0
+p
+    margin: 0
+    padding: 0
+figure
+    -webkit-margin-before: 0em
+    -webkit-margin-after: 0em
+    -webkit-margin-start: 0px
+    -webkit-margin-end: 0px
+a
+    cursor: auto
+.mask
+    background: rgba(0,0,0,.5)
+#mask
+    width: 100vw
+    height: 100vw
+#warp 
+    padding-top: 10vw 
+    & .demobox
+        margin: auto
+        width: 1000px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        & .demo
+            width: 300px
+            margin-bottom: 30px
+            height: $videoheight + $contentheight
+            transition: box-shadow .5s, filter .5s
+            font-family: Microsoft Yahei      
+            &:hover      
+                box-shadow: 2px 2px 15px 2px rgba(0,0,0,.8) 
+                filter: brightness(1.5)
+            & .video          
+                height: $videoheight
+            & .content
+                display: flex
+                background: rgba(0,0,0,.5)
+                align-items: center         
+                height: $contentheight
+                & .userpicbox
+                    width: 50px
+                    height: 50px
+                    margin-right: 15px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    & img
+                        border-radius: 50%
+                        width: 75%
+                        height: auto
+                & .info
+                    color: #fff
+                    height: 32px         
+                    overflow: hidden
+                    & p
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                    & p:nth-of-type(1)
+                        font-size: 12px                  
+                    & p:nth-of-type(2)
+                        font-size: 14px
+    & .video img
+        width: 100%
+        height: auto
+        display: block

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script>
+        var h5Dom=["section","nav","aside","main","header","footer","mark"];
+        for(i=-1;h5Dom[++i];){
+            document.createElement(h5Dom[i]);
+        }
+    </script>
+</head>
+<body>
+    <section class="wrap whiteSpaceNowrap">
+        <header class="top clearfix">
+            <section class="logo lFloat clearfix">HaveFun</section>
+            <section class="search lFloat clearfix">
+                <span class="searchIcon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input id="headerSearch" type="text" onkeydown=markSearch(this.value) placeholder="Explore your own activities">
+            </section>
+        </header>
+        <aside>
+            <section class="location">
+                <h2>Location</h2>
+                <input id="search" onkeydown=dateSearch() oninput=
+                    "ajax({
+                        data:{
+                            q:this.value
+                        },
+                        url:'https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97',
+                        type:'get'
+                    })" 
+                type="text" placeholder="高雄">
+            </section>
+            <section class="date">
+                <h2 class="title">
+                    <span>Date</span>
+                    <span class="switch rFloat clearfix displayNone">+</span>
+                </h2>
+                <section class="dropdowns">
+                    <section class="clearfix inputList">
+                        <span>from</span>
+                        <input class="rFloat"type="text" placeholder="">
+                    </section>
+                    <section class="clearfix inputList">
+                        <span>to</span>
+                        <input class="rFloat"type="text" placeholder="">
+                    </section>
+                </section>
+            </section>
+            <section class="categories">
+                <h2 class="title">
+                    <span>Categories</span>
+                    <span class="switch rFloat clearfix displayNone">+</span>
+                </h2>
+                <section class="dropdowns">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="" id="">All
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">Entertainment
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">Food
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">Learning
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">Outdoors
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </aside>
+        <main class="inlineBlock whiteSpaceinitial">
+            <header class="result">
+                <h2 class="title"></h2>
+                <!-- <section class="tags displayNone">
+                    <section class="tag inlineBlock">
+                        <i class="tagText">Koahsiung</i>
+                        <i class="fas fa-times close"></i>
+                    </section>
+                    <section class="tag inlineBlock">
+                        <i class="tagText">Koahsiung</i>
+                        <i class="fas fa-times close"></i>
+                    </section>
+                </section> -->
+            </header>
+            <section id="listWrap">
+                <figure class="list clearfix">
+                    <img class="lFloat"src="" alt="" width=220 height="220">
+                    <article class="lFloat content">
+                        <h2 class="title"></h2>
+                        <p class="description"></p>
+                    </article>
+                </figure>
+                <figure class="list clearfix">
+                    <img class="lFloat"src="" alt="" width=220 height="220">
+                    <article class="lFloat content">
+                        <h2 class="title"></h2>
+                        <p class="description"></p>
+                    </article>
+                </figure>
+                <figure class="list clearfix">
+                    <img class="lFloat"src="" alt="" width=220 height="220">
+                    <article class="lFloat content">
+                        <h2 class="title"></h2>
+                        <p class="description"></p>
+                    </article>
+                </figure>
+                <figure class="list clearfix">
+                    <img class="lFloat"src="" alt="" width=220 height="220">
+                    <article class="lFloat content">
+                        <h2 class="title"></h2>
+                        <p class="description"></p>
+                    </article>
+                </figure>
+            </section>
+        </main>
+        <footer>
+            <section class="indexBox">
+                <span class="index">1</span>
+                <span class="index">2</span>
+                <span class="index">3</span>
+            </section>
+        </footer>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

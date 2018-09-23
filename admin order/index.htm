@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>admin order</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <script>
+        var h5Dom = ["section", "nav", "aside", "main", "header", "footer", "mark","svg"];
+        for (i = -1; h5Dom[++i];) {
+            document.createElement(h5Dom[i]);
+        }
+    </script>
+</head>
+
+<body>
+    <section class="container">
+        <nav class="topNav clearfix">
+            <header id="logo" class="inlineBlock">
+                <a href="#" class="colorWhite">Shoptime</a>
+            </header>
+            <ul class="inlineBlock navbar">
+                <li class="inlineBlock navCk">
+                    <a href="#" class="colorWhite">HOME</a>
+                    <span class="underLine"></span>
+                </li>
+                <li class="inlineBlock">
+                    <a href="#">ORDERS</a>
+                </li>
+                <li class="inlineBlock">
+                    <a href="#">PRODUCT</a>
+                </li>
+            </ul>
+            <footer id="admin" class="inlineBlock colorWhite">
+                <a href="#">ADMIN</a>
+            </footer>
+        </nav>
+        <section class="container">
+            <header class="topHeader clearfix">
+                <section class="title leftF">OVERVIEW</section>
+                <section class="info rightF">
+                    <span class="date">2018/6/6</span>
+                    <span class="date">2018/6/13</span>
+                    <span class="week">Weekly</span>
+                </section>
+            </header>
+            <section class="statistics">
+                <figure class="totalRevenue inlineBlock">
+                    <figcaption class="title">
+                        <i class="fas fa-hand-holding-usd">&nbsp;</i>
+                        <i>total&nbsp;Revenue</i>
+                    </figcaption>
+                    <strong class="amount green">54,540</strong>
+                </figure>
+                <figure class="totalCost inlineBlock">
+                    <figcaption class="title">
+                        <i class="fas fa-credit-card">&nbsp;</i>
+                        <i>total&nbsp;Cost</i>
+                    </figcaption>
+                    <strong class="amount red">12,660</strong>
+                </figure>
+                <figure class="netIncome inlineBlock">
+                    <figcaption class="title">
+                        <i class="fas fa-money-bill">&nbsp;</i>
+                        <i>net&nbsp;Income</i>
+                    </figcaption>
+                    <strong class="amount blue">41,880</strong>
+                </figure>
+            </section>
+            <section class="graph">
+                <header class="title">Activity</header>
+                <section class="content">
+                    <ul class="leftScale">
+                        <li>8,000</li>
+                        <li>6,000</li>
+                        <li>4,000</li>
+                        <li>2,000</li>
+                        <li>0</li>
+                    </ul>
+                    <section class="inlineBlock chartWrap">
+                        <svg class="lineChart" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        </svg>
+                        <ul class="bottomScale">
+                            <li>6 JUN</li>
+                            <li>7 JUN</li>
+                            <li>8 JUN</li>
+                            <li>9 JUN</li>
+                            <li>10 JUN</li>
+                            <li>11 JUN</li>
+                            <li>12 JUN</li>
+                            <li>13 JUN</li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+            <footer class="footer">
+                <section class="LFooter">
+                    <header class="title">Transaction Website</header>
+                    <ul>
+                        <li>
+                            <i class="fab fa-facebook-square webIcon"></i>
+                            <i class="webSite">Facebook.com</i>
+                            <span class="rightF">
+                                <i class="price">45,836</i>
+                                <i class="fas fa-arrow-up up"></i>
+                                <i class="percent up">20%</i>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fab fa-google webIcon"></i>
+                            <i class="webSite">google.com</i>
+                            <span class="rightF">
+                                <i class="price">23,582</i>
+                                <i class="fas fa-arrow-up up"></i>
+                                <i class="percent up">12%</i>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shopping-bag webIcon"></i>
+                            <i class="webSite">Shopify.com</i>
+                            <span class="rightF">
+                                <i class="price">2,489</i>
+                                <i class="fas fa-arrow-down down"></i>
+                                <i class="percent down">15%</i>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fab fa-wordpress webIcon"></i>
+                            <i class="webSite">Wordpress.com</i>
+                            <span class="rightF">
+                                <i class="price">1,057</i>
+                                <i class="fas fa-arrow-down down"></i>
+                                <i class="percent down">30%</i>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="RFooter">
+                    <header class="title">Latest Orders</header>
+                    <figure>
+                        <img src="image/1.jpg" alt="">
+                        <section class="content">
+                            <figcaption class="imgTitle">Vintage T-shirt</figcaption>
+                            <p>
+                                <i class="fas fa-clock"></i>
+                                <i class="time">2018/6/13</i>
+                                <i class="time">13:42</i>
+                                <i class="total">Total</i>
+                            </p>
+                            <p>
+                                <i class="fas fa-male"></i>
+                                <i class="info">Belle Willis</i>
+                                <i class="price">3,200</i>
+                            </p>
+                        </section>
+                    </figure>
+                    <figure>
+                        <img src="image/2.jpg" alt="">
+                        <section class="content">
+                            <figcaption class="imgTitle">Cowboy Jacket</figcaption>
+                            <p>
+                                <i class="fas fa-clock"></i>
+                                <i class="time">2018/6/13</i>
+                                <i class="time">10:45</i>
+                                <i class="total">Total</i>
+                            </p>
+                            <p>
+                                <i class="fas fa-male"></i>
+                                <i class="info">Adrian Cummings</i>
+                                <i class="price">2,800</i>
+                            </p>
+                        </section>
+                    </figure>
+                    <figure>
+                        <img src="image/3.jpg" alt="">
+                        <section class="content">
+                            <figcaption class="imgTitle">Coach Coat</figcaption>
+                            <p>
+                                <i class="fas fa-clock"></i>
+                                <i class="time">2018/6/13</i>
+                                <i class="time">8:26</i>
+                                <i class="total">Total</i>
+                            </p>
+                            <p>
+                                <i class="fas fa-male"></i>
+                                <i class="info">Lura Holland</i>
+                                <i class="price">1,600</i>
+                            </p>
+                        </section>
+                    </figure>
+                </section>
+            </footer>
+        </section>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
