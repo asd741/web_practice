@@ -1,4 +1,4 @@
-音樂視覺化  使用火狐瀏覽器觀看---->https://asd741.nctu.me/asd's%20music%20draw/
+音樂視覺化  建議使用火狐瀏覽器打開---->https://asd741.nctu.me/asd's%20music%20draw/
 
 圖片分解重組-->https://asd741.nctu.me/asd's%20fragment/
 
