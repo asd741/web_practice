@@ -1,3 +1,5 @@
+音樂視覺化  使用火狐瀏覽器---->https://asd741.nctu.me/asd's%20music%20draw/
+
 圖片分解重組-->https://asd741.nctu.me/asd's%20fragment/
 
 手刻svg-->https://asd741.nctu.me/admin%20order/
