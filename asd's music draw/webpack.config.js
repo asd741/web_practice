@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   entry: "./index.js",
@@ -37,7 +37,16 @@ module.exports = {
           }
         ],
         exclude:/node_modules/
-      }
+      },
+      {
+        test: /\.js$/,
+        use: [{
+            loader: 'babel-loader',
+            options: {
+                presets: ['es2015']
+            }
+        }]
+      },
     ]
   }
 }

@@ -1,3 +1,4 @@
+const indexSass=require('./index.sass')
 let oCanvas = document.getElementById("canvas"),
     oAudio = document.getElementById("audio"),
     oTime = document.getElementById("time"),
@@ -58,9 +59,7 @@ function drawMusic() {
         // ctx.stroke();
     // }
     function drawOutsideMusic() {
-        for (let i = 0; i < dateLength / 2; i++) {
-            colorStart = 0;
-            colorGap = 30;
+        for (let i = 0,colorStart=0,colorGap=30,color; i < dateLength / 2; i++) {
             colorStart + i >= 360 ? color = colorStart - 360 + i / (dateLength / 2) * colorGap : color = colorStart + i / (dateLength / 2) * colorGap;
             bar_height = fbc_array[i];
             ctx.fillStyle = `hsl(${color},70%,60%)`;//顏色，灰階，亮度
@@ -69,9 +68,7 @@ function drawMusic() {
         }
     }
     function drawInsideMusic() {
-        for (let i = dateLength / 2; i < dateLength; i++) {
-            colorStart = 0;
-            colorGap = 360;
+        for (let i = dateLength / 2,colorStart=0,colorGap=360,color; i < dateLength; i++) {
             colorStart + i >= 360 ? color = colorStart - 360 + i / (dateLength / 2) * colorGap : color = colorStart + i / (dateLength / 2) * colorGap;
             bar_height = fbc_array[i] / 2;
             ctx.fillStyle = `hsl(${color},30%,60%)`;
