@@ -38,6 +38,7 @@ function resizeCanvas() {
             opacity: .7;
         `;
 }
+setInterval(resizeCanvas,10000);
 function drawMusic() {
     ctx.clearRect(0, 0, oCanvas.width, oCanvas.height);//清空上次畫的
     analyser.getByteFrequencyData(fbc_array);//渲染陣列空間內的數據
