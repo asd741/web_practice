@@ -1,4 +1,3 @@
-(點連結可以觀看)
 canvas音樂視覺化---->https://asd741.nctu.me/asd's%20music%20draw/
 
 圖片分解重組-->https://asd741.nctu.me/asd's%20fragment/
