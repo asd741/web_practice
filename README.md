@@ -1,4 +1,4 @@
-音質比較程式，有時候Lag會不同步ㄏㄏ(使用火狐瀏覽器開啟)---->https://asd741.nctu.me/music%20testV2/
+音質比較程式---->https://asd741.nctu.me/music%20testV2/
 
 canvas音樂視覺化---->https://asd741.nctu.me/asd's%20music%20draw/
 
