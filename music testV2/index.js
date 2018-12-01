@@ -20,6 +20,8 @@ let oCanvas = document.getElementById("canvas"),
 // window.addEventListener("load", init, false);
 setTimeout(init,3000);
 function init() {//初始化
+    oAudio.play();
+    oAudio2.play();
     source.connect(analyser);//分析儀開始分析音樂
     source2.connect(analyser2);//分析儀開始分析音樂
     analyser.connect(context.destination);//連接到喇叭
