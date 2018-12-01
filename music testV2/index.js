@@ -13,22 +13,23 @@ let oCanvas = document.getElementById("canvas"),
     dateLength = 360 / rotateGap * 2,//獲取兩圈數據所需數量，每圈需要(360度/旋轉間隔)的數據量
     fbc_array = new Uint8Array(analyser.frequencyBinCount),//創立放置數據所需的陣列空間
     fbc_array2 = new Uint8Array(analyser2.frequencyBinCount),//創立放置數據所需的陣列空間
-   
-    
     ctx = oCanvas.getContext('2d'),
     circleR = 200;//圓形的半徑設定
-// window.addEventListener("load", init, false);
-setTimeout(init,3000);
+window.addEventListener("load", init, false);
 function init() {//初始化
-    oAudio.play();
-    oAudio2.play();
     source.connect(analyser);//分析儀開始分析音樂
     source2.connect(analyser2);//分析儀開始分析音樂
     analyser.connect(context.destination);//連接到喇叭
     analyser2.connect(context.destination);//連接到喇叭
     window.onresize = resizeCanvas;//螢幕大小變動時重新設定canvas大小
+    startBtn.style.display="block";
     resizeCanvas();
     drawMusic();
+}
+function musicStart(){
+    startBtn.style.display="none";
+    oAudio.play();
+    oAudio2.play();
 }
 function resizeCanvas() {
     oCanvas.width = window.innerWidth;
