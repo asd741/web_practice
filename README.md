@@ -1,3 +1,5 @@
+音質比較程式---->https://asd741.nctu.me/music%20testV2/
+
 canvas音樂視覺化---->https://asd741.nctu.me/asd's%20music%20draw/
 
 圖片分解重組-->https://asd741.nctu.me/asd's%20fragment/
