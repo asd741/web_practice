@@ -6,7 +6,7 @@ var server=http.createServer(function (req,res) {
     res.end(html);
 });
 server.listen(() => {
-    console.log("Server Started. https://asd741.nctu.me/chatroom/");
+    console.log("Server Started. https://asd741.nctu.me/");
 });
 var io=ws(server);
 io.on("connection",function(socket) {
