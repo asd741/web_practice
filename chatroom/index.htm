@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 700px;
+            height: 800px;
+            margin: 100px auto;
+            text-align: right;
+        }
+        #chat{
+            width: 100%;
+            height: 500px;
+            border: 2px solid;
+            margin-bottom: 10px;
+            overflow-y: scroll;
+        }
+        #chat .msg{
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div id='wrap'>
+        <div id='chat'></div>
+        <input type="text" id="text">
+        <button onclick="send()" id='btn'>送出</button>
+    </div>
+    
+    <script src="http://wulv5.com/js/socket.io.min.js"></script>
+    <script>
+    var socket=io.connect("/");
+    document.documentElement.addEventListener('keydown',event=>{
+        if(event.key==='Enter'){
+            send();
+        }
+    });
+    function send() {
+        if(text.value){
+            socket.send(text.value);
+            text.value='';
+        }
+    }
+    socket.on('message',function(msg) {
+        var oDiv=document.createElement('div');
+        oDiv.innerText=msg;
+        oDiv.className='msg';
+        chat.appendChild(oDiv);
+    });
+    </script>
+</body>
+</html>

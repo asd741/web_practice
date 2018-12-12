@@ -1,0 +1,16 @@
+body {
+  margin: 0; }
+
+.container {
+  width: 1024px; }
+  .container .top {
+    background-color: #000;
+    height: 72px;
+    text-align: center; }
+    .container .top h2 {
+      font-family: Roboto-BlackItalic;
+      font-size: 36px;
+      line-height: 36px;
+      color: #50FF44; }
+
+/*# sourceMappingURL=index.css.map */
