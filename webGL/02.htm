@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #stats {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stats"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script>
+        let scene = new THREE.Scene(),
+            camera = new THREE.PerspectiveCamera(
+                45,
+                window.innerWidth / window.innerHeight,
+                0.1,
+                1000
+            ),
+            pointLight = new THREE.PointLight(0xffffff),
+            directionalLight = new THREE.DirectionalLight(0xffff00),
+            spotLight = new THREE.SpotLight(0xffffff),
+
+            renderer = new THREE.WebGLRenderer();
+        let geometry = new THREE.BoxGeometry(1, 1, 1),
+            material = new THREE.MeshStandardMaterial({
+                color: 0x0000ff
+            }),
+            geometry2 = new THREE.BoxGeometry(10, 10, 1),
+            cube = new THREE.Mesh(geometry, material),
+            floor = new THREE.Mesh(geometry2, material);
+        cube.position.set(1, 1, 1);
+        floor.position.set(1, 1, -1);
+        cube.castShadow = true;
+        pointLight.position.set(0.5, 0.5, 3);
+        pointLight.castShadow = true;
+        directionalLight.position.set(1, 1, -1);
+        directionalLight.castShadow = true;
+        spotLight.position.set(0.25, 0.25, -3);
+        spotLight.castShadow = true;
+        scene.add(cube, floor, pointLight,spotLight,directionalLight);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0xeeeeee);
+        document.body.appendChild(renderer.domElement);
+        camera.position.set(-5, 5, 5);
+        camera.lookAt(scene.position);
+
+        let cameraControl = new THREE.OrbitControls(camera);
+        cameraControl.enableDamping = true;//放大和旋轉效果
+        cameraControl.dampingFactor = 1.4;//滑鼠拖曳靈敏度
+        cameraControl.autoRotate = true;    // 啟用自動旋轉(轉的是camera)
+        renderer.shadowMap.enable = true;
+
+        // 建立監測器
+        function initStats() {
+            const stats = new Stats();
+            stats.setMode(0); // FPS mode
+            document.getElementById('stats').appendChild(stats.domElement);
+            return stats;
+        }
+        let statsUI = initStats(); // 初始化
+
+        renderer.render(scene, camera);
+        function render() {
+            requestAnimationFrame(render);
+            cameraControl.update();//激活cameraControl.autoRotate
+            statsUI.update();
+            renderer.render(scene, camera);
+        }
+        render();
+        window.addEventListener('resize', function () {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.render(scene, camera);
+        });
+
+
+    </script>
+</body>
+
+</html>

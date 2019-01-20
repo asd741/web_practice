@@ -5,9 +5,7 @@ var server=http.createServer(function (req,res) {
     var html=fs.readFileSync('./index.htm');
     res.end(html);
 });
-server.listen(() => {
-    console.log("Server Started. https://asd741.nctu.me/");
-});
+server.listen(3000);
 var io=ws(server);
 io.on("connection",function(socket) {
     socket.on("message",function(msg) {
