@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,4 +96,103 @@
   </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>
+  <script>
+    // let scene = new THREE.Scene();//場景
+    // let renderer = new THREE.WebGLRenderer();//渲染器
+    // renderer.setSize(window.innerWidth, window.innerHeight);
+    // renderer.setClearColor(0xffffff, 1.0);//預設背景顏色
+    // //不設置的話背景的默認值是0x000000(黑色)，0x可以看做是#，但不能簡寫成0x000
+    // renderer.shadowMap.enable = true;//不設置成true就沒影子
+    // document.body.appendChild(renderer.domElement);//renderer.domElement是一個canvas標籤，寬高會吃到setSize
+
+    // let camera = new THREE.PerspectiveCamera(
+    //   45,//視野範圍，一般遊戲設定在60~90度
+    //   window.innerWidth / window.innerHeight,//渲染結果的畫面比例
+    //   0.1,//從距離相機多近的地方開始渲染
+    //   100//相機能看得多遠，設置過大會lag
+    // )
+
+
+    // camera.position.set(10, 10, 10);//相機位置
+    // camera.lookAt(scene.position);//相機焦點，這個屬性是指相機會盯著何處，一般靜止觀察的相機都是設定為 camera.lookAt(scene.position)，就是觀察場景固定的位置。但若今天你要讓相機動態追蹤某個物體，那你可以在渲染時改變 camera.lookeAt 中的參數為特定物體的某個基準座標
+
+    // let pointLight = new THREE.PointLight(0xffffff);//點光源。從特定一點向所有方向發射光線，可以投射陰影。類似燈泡、螢火蟲的概念。
+    // pointLight.position.set(100, 100,20);
+    // scene.add(pointLight);
+
+    // const geometry = new THREE.BoxGeometry(1, 1, 1); // 幾何體
+    // const material = new THREE.MeshPhongMaterial({
+    //   color: 0x0000ff
+    // }); // 材質
+    // let cube = new THREE.Mesh(geometry, material); // 建立網格物件
+    // cube.position.set(0, 0, 0);
+    // scene.add(cube);
+    // function animate() {
+    //   cube.rotation.x += 0.01
+    //   cube.rotation.y += 0.01
+    // }
+    // function render() {
+    //   animate();
+    //   requestAnimationFrame(render);
+    //   renderer.render(scene, camera);
+    // }
+    // render();
+
+
+    let scene = new THREE.Scene(),
+      camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      ),
+      ponitLight = new THREE.PointLight(0xffffff),
+      renderer = new THREE.WebGLRenderer();
+    let geometry = new THREE.BoxGeometry(1, 1, 1),
+      material = new THREE.MeshPhongMaterial({
+        color: 0x0000ff
+      }),
+      cube = new THREE.Mesh(geometry, material);
+    ponitLight.position.set(-1, 0, 0.7);
+    scene.add(cube, ponitLight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0xffffff);
+    document.body.appendChild(renderer.domElement);
+    camera.position.set(-5, 5, 5);
+    camera.lookAt(scene.position);
+    renderer.shadowMap.enable = true;
+    renderer.render(scene, camera);
+    function animate() {
+      cube.rotation.x += 0.02;
+      cube.rotation.y += 0.02;
+    }
+    function render() {
+      animate();
+      requestAnimationFrame(render);
+      renderer.render(scene,camera);
+    }
+    render();
+    window.addEventListener('resize', function () {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.render(scene, camera);
+    });
+  </script>
+</body>
+
+>>>>>>> 7c4a97f71fe720adb59bf3ca93fbb7914f822df9
 </html>

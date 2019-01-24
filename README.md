@@ -1,5 +1,3 @@
-try webGL--->https://asd741.github.io/web_practice/webGL.htm
-
 音質比較程式(聲音沒同步可以按F5重新整理)---->https://asd741.github.io/web_practice/music%20testV2/
 
 canvas音樂視覺化---->https://asd741.github.io/web_practice/asd's%20music%20draw/
