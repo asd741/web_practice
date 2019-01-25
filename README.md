@@ -1,4 +1,4 @@
-粒子ㄐhttps://asd741.github.io/web_practice/webGL/03.htm
+粒子球https://asd741.github.io/web_practice/webGL/03.htm
 
 音質比較程式(聲音沒同步可以按F5重新整理)---->https://asd741.github.io/web_practice/music%20testV2/
 
