@@ -1,8 +1,8 @@
 粒子球https://asd741.github.io/web_practice/webGL/03.htm
 
-音質比較程式(聲音沒同步可以按F5重新整理)---->https://asd741.github.io/web_practice/music%20testV2/
+(用火狐打開)音質比較程式(聲音沒同步可以按F5重新整理)---->https://asd741.github.io/web_practice/music%20testV2/
 
-canvas音樂視覺化---->https://asd741.github.io/web_practice/asd's%20music%20draw/
+(用火狐打開)canvas音樂視覺化---->https://asd741.github.io/web_practice/asd's%20music%20draw/
 
 圖片分解重組-->https://asd741.github.io/web_practice/asd's%20fragment/
 
